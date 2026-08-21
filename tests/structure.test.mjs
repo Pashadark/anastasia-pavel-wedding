@@ -36,18 +36,27 @@ test("contains the complete wedding invitation", async () => {
     const matches = html.match(new RegExp(`new-photo-${String(photo).padStart(2, "0")}\\.jpg`, "g")) ?? [];
     assert.equal(matches.length, 1, `new photo ${photo} must appear exactly once`);
   }
-  assert.match(html, /assets\/decline-video\.mp4/);
+  assert.match(html, /assets\/decline-video-new\.mp4/);
+  assert.match(html, /assets\/decline-audio\.mp3/);
+  assert.match(html, /data-decline-audio/);
   assert.match(html, /data-decline-video/);
   assert.match(html, /decline-video/);
+  assert.doesNotMatch(html, /data-decline-video[^>]*\scontrols(?:\s|=|>)/);
+  assert.match(script, /declineAudio\.play/);
+  assert.match(script, /declineVideo\.muted = true/);
+  assert.match(html, /class="memory-main" src="\.\/assets\/new-photo-01\.jpg"/);
   assert.match(html, /scroll-diamonds/);
   assert.doesNotMatch(html, /Открыть карту ↗/);
   assert.doesNotMatch(html, /Открыть видео отдельно ↗/);
 });
 
-test("uses paper-cut section transitions", async () => {
+test("uses irregular torn-paper section transitions and a brownie closing", async () => {
   const css = await readFile(new URL("../theme-a.css", import.meta.url), "utf8");
   assert.match(css, /paper-cut/);
-  assert.match(css, /conic-gradient/);
+  assert.match(css, /clip-path:polygon/);
+  assert.doesNotMatch(css, /conic-gradient/);
+  assert.match(css, /\.closing\{background:#4b3028/);
+  assert.match(css, /\.memory-gallery\{[^}]*position:relative/);
   assert.match(css, /\.quote\{[^}]*Great Vibes/);
   assert.match(css, /\.quote\{[^}]*white-space:nowrap/);
 });

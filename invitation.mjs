@@ -54,11 +54,17 @@ function boot() {
     panel.focus();
     if (music) music.pause();
     const declineVideo = panel.querySelector("[data-decline-video]");
+    const declineAudio = panel.querySelector("[data-decline-audio]");
     if (declineVideo) {
-      declineVideo.muted = false;
-      declineVideo.volume = 1;
+      declineVideo.muted = true;
       declineVideo.currentTime = 0;
       declineVideo.play().catch(() => declineVideo.setAttribute("controls", ""));
+    }
+    if (declineAudio) {
+      declineAudio.muted = false;
+      declineAudio.volume = 1;
+      declineAudio.currentTime = 0;
+      declineAudio.play().catch(() => declineAudio.setAttribute("controls", ""));
     }
   });
 }
