@@ -48,4 +48,5 @@ test("uses paper-cut section transitions", async () => {
   const css = await readFile(new URL("../theme-a.css", import.meta.url), "utf8");
   assert.match(css, /paper-cut/);
   assert.match(css, /conic-gradient/);
+  assert.match(css, /\.quote\{[^}]*Great Vibes/);
 });
