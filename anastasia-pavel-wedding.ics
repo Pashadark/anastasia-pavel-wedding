@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Anastasia and Pavel//Wedding Invitation//RU
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:wedding-20260902-anastasia-pavel
+DTSTAMP:20260821T120000Z
+DTSTART:20260902T080000Z
+DTEND:20260902T180000Z
+SUMMARY:Свадьба Анастасии и Павла
+LOCATION:Москва
+DESCRIPTION:Сбор гостей в 11:00 на Тверской площади. Роспись в 11:40. Фотосессия с 12:30 до 14:00. Бар «Дневник» с 14:30.
+END:VEVENT
+END:VCALENDAR

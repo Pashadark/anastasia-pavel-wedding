@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Prata&display=swap');
+
+:root{--ivory:#f6f2e9;--ivory-deep:#ebe3d5;--charcoal:#1b1917;--rule:#8e877d}
+body{background:#d8d1c5;color:var(--charcoal)}
+main{background:var(--ivory);box-shadow:0 0 50px #0002}
+.paper,.ink,.calendar-section{background:var(--ivory);color:var(--charcoal)}
+
+.welcome{background:var(--ivory);color:var(--charcoal);padding:24px}
+.welcome-card{width:min(100%,520px);min-height:72svh;border:1px solid var(--charcoal);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:52px 24px;box-shadow:0 16px 40px #4b403020;position:relative}
+.welcome-card:before,.welcome-card:after{content:"";position:absolute;left:50%;width:58px;border-top:1px solid var(--rule);transform:translateX(-50%)}
+.welcome-card:before{top:34px}.welcome-card:after{bottom:34px}
+.welcome-mark{font:400 clamp(70px,23vw,112px)/.8 Prata,'Cormorant Garamond',serif}
+.welcome-names{font:400 clamp(35px,11vw,58px)/1.1 'Great Vibes',cursive!important;margin:42px 0 12px!important;text-transform:none!important}
+.welcome-names b{font:400 .48em Georgia,serif;margin:0 .15em}
+.welcome-card time{font:400 16px Prata,serif;letter-spacing:.18em}
+.welcome-line{font:500 9px Montserrat,sans-serif;text-transform:uppercase;letter-spacing:.28em;margin:32px 0 22px}
+.welcome button{width:min(100%,330px);min-height:58px;display:grid;place-items:center;text-align:center;background:var(--ivory)!important;color:var(--charcoal)!important;border:1px solid var(--charcoal)!important;border-radius:0!important;box-shadow:0 8px 18px #30281e24!important;font-size:10px!important}
+
+.hero{background:var(--ivory);color:var(--charcoal);padding-top:8px}
+.hero-top{padding:36px 24px 22px}.hero .monogram{font-family:Prata,'Cormorant Garamond',serif;font-size:72px}.hero .script-names{font-size:36px!important;margin-top:28px}
+.hero-photo{min-height:58svh;margin:0 22px;background-position:52% 67%;border:10px solid #fff;box-shadow:0 13px 30px #30281e29;filter:grayscale(1)}
+.hero-date{padding:28px 28px 38px;color:var(--charcoal)}
+.scroll.scroll-diamonds{filter:drop-shadow(0 2px 3px #fff);bottom:112px}.scroll-diamonds i{border-color:var(--charcoal)}
+
+.paper,.ink{padding-top:104px;padding-bottom:104px}.eyebrow{font-weight:500;color:#5d574f}.paper h1,.paper h2,.ink h2,.closing h2,.calendar-section h2{font-family:Prata,'Cormorant Garamond',serif}.lead,.quote{font-family:'Cormorant Garamond',serif}.quote{margin-top:45px}.ornament{font-family:Prata,serif}
+.countdown-section{border-top:1px solid #bbb2a7;border-bottom:1px solid #bbb2a7}.countdown div{border-color:#928a7e}.timer-detail{border:7px solid #fff;box-shadow:0 9px 22px #32291f2e;padding:0;filter:grayscale(1)}
+.calendar-button,.map-button,.button,.button.dark,.button.light,.video-fallback{background:var(--ivory)!important;color:var(--charcoal)!important;border:1px solid var(--charcoal)!important;border-radius:0!important;box-shadow:0 7px 16px #30281e2b!important;display:grid!important;place-items:center!important;text-align:center!important;line-height:1.2!important}
+
+.section-head h2{font-family:'Great Vibes',cursive;font-size:70px}.timeline article{padding-bottom:52px}.timeline time{font-family:Prata,serif}.timeline h3,.places h3{font-family:Prata,serif;font-weight:400}.timeline article:before{border-color:#7f786f}.timeline div:before{background:var(--charcoal)}
+.photo-break{background:var(--ivory);padding:20px 30px 70px}.photo-break img{height:min(74vh,700px);border:10px solid #fff;box-shadow:0 14px 34px #30281e30;filter:grayscale(1)}
+
+.story-gallery{text-align:center;padding-top:20px}.story-photo{display:block;filter:grayscale(1);border:9px solid #fff;box-shadow:0 13px 30px #30281e2b}.story-photo.portrait{width:72%;margin:0 0 0 4%;transform:rotate(-2deg)}.story-photo.landscape{width:82%;margin:10px 4% 0 auto;transform:rotate(2deg)}.story-script{font:400 44px/1.1 'Great Vibes',cursive;margin:48px auto;max-width:330px}
+.details article{border-color:#a8a095}.details article>span{font-family:Prata,serif;font-style:normal;color:#716a61}.details h2{font-family:Prata,serif;font-size:38px}.details p{font-size:13px;line-height:1.85}
+.editorial-strip{display:grid;grid-template-columns:1.15fr .85fr;gap:12px;padding-top:20px}.editorial-strip img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);border:6px solid #fff;box-shadow:0 10px 24px #30281e24}.editorial-strip img:first-child{grid-row:span 2;min-height:420px}.editorial-strip img:not(:first-child){min-height:202px}
+.places{gap:22px}.places article{background:#fbf8f1;border:1px solid #a79e91;box-shadow:0 9px 22px #30281e14}.places small{font-family:Prata,serif}.map-button{width:100%;margin-top:22px}
+
+#dress-code{border-top:1px solid #a8a095;border-bottom:1px solid #a8a095}.forbidden-colors i{border-color:#8d857a;box-shadow:0 4px 10px #30281e22}.calendar{border-color:var(--charcoal)}.wedding-day svg{stroke:var(--charcoal)}
+.calendar-section{border-bottom:1px solid #a8a095}.decline{background:#fbf8f1}.decline-video{box-shadow:0 12px 28px #30281e35}
+.closing{background-image:url('./assets/anastasia-pavel.jpg');background-color:#111}.closing:before{content:"";position:absolute;inset:0;background:#0008}.closing{position:relative}.closing>div{position:relative;z-index:1}.closing .script-title{font-family:'Great Vibes',cursive!important}
+
+@media(min-width:700px){.hero-photo{margin:0 70px}.story-gallery,.editorial-strip{padding-left:100px;padding-right:100px}}
+@media(max-width:420px){.hero .script-names{font-size:32px!important}.paper,.ink{padding-left:24px;padding-right:24px}.countdown{gap:4px}.countdown strong{font-size:34px}.welcome-card{min-height:78svh}.editorial-strip{padding-left:22px;padding-right:22px}}
