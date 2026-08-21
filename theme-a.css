@@ -22,7 +22,7 @@ main{background:var(--ivory);box-shadow:0 0 50px #0002}
 .hero-date{padding:28px 28px 38px;color:var(--charcoal)}
 .scroll.scroll-diamonds{filter:drop-shadow(0 2px 3px #fff);bottom:112px}.scroll-diamonds i{border-color:var(--charcoal)}
 
-.paper,.ink{padding-top:104px;padding-bottom:104px}.eyebrow{font-weight:500;color:#5d574f}.paper h1,.paper h2,.ink h2,.closing h2,.calendar-section h2{font-family:Prata,'Cormorant Garamond',serif}.lead{font-family:'Cormorant Garamond',serif}.quote{font:400 clamp(35px,10vw,48px)/1.15 'Great Vibes',cursive;margin-top:45px}.ornament{font-family:Prata,serif}
+.paper,.ink{padding-top:104px;padding-bottom:104px}.eyebrow{font-weight:500;color:#5d574f}.paper h1,.paper h2,.ink h2,.closing h2,.calendar-section h2{font-family:Prata,'Cormorant Garamond',serif}.lead{font-family:'Cormorant Garamond',serif}.quote{font:400 clamp(25px,7.4vw,38px)/1.2 'Great Vibes',cursive;margin-top:45px;white-space:nowrap}.ornament{font-family:Prata,serif}
 .countdown-section{border-top:1px solid #bbb2a7;border-bottom:1px solid #bbb2a7}.countdown div{border-color:#928a7e}.timer-detail{border:7px solid #fff;box-shadow:0 9px 22px #32291f2e;padding:0;filter:grayscale(1)}
 .calendar-button,.map-button,.button,.button.dark,.button.light,.video-fallback{background:var(--ivory)!important;color:var(--charcoal)!important;border:1px solid var(--charcoal)!important;border-radius:0!important;box-shadow:0 7px 16px #30281e2b!important;display:grid!important;place-items:center!important;text-align:center!important;line-height:1.2!important}
 

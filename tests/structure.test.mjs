@@ -49,4 +49,5 @@ test("uses paper-cut section transitions", async () => {
   assert.match(css, /paper-cut/);
   assert.match(css, /conic-gradient/);
   assert.match(css, /\.quote\{[^}]*Great Vibes/);
+  assert.match(css, /\.quote\{[^}]*white-space:nowrap/);
 });
