@@ -27,11 +27,25 @@ test("contains the complete wedding invitation", async () => {
   assert.match(html, /Карандаш/);
   assert.match(html, /мальчика или девочку/);
   assert.match(html, /forbidden-colors/);
-  assert.match(html, /Сиреневый/);
+  assert.doesNotMatch(html, /Сиреневый|сиренев/iu);
+  assert.match(html, /Не рекомендуемые цвета: белый и красный/);
+  assert.match(html, /class="photo-stack"/);
+  assert.match(html, /class="photo-stack-card photo-stack-large"/);
+  assert.match(html, /class="photo-stack-card photo-stack-small"/);
+  for (let photo = 1; photo <= 10; photo += 1) {
+    const matches = html.match(new RegExp(`new-photo-${String(photo).padStart(2, "0")}\\.jpg`, "g")) ?? [];
+    assert.equal(matches.length, 1, `new photo ${photo} must appear exactly once`);
+  }
   assert.match(html, /assets\/decline-video\.mp4/);
   assert.match(html, /data-decline-video/);
   assert.match(html, /decline-video/);
   assert.match(html, /scroll-diamonds/);
   assert.doesNotMatch(html, /Открыть карту ↗/);
   assert.doesNotMatch(html, /Открыть видео отдельно ↗/);
+});
+
+test("uses paper-cut section transitions", async () => {
+  const css = await readFile(new URL("../theme-a.css", import.meta.url), "utf8");
+  assert.match(css, /paper-cut/);
+  assert.match(css, /conic-gradient/);
 });
