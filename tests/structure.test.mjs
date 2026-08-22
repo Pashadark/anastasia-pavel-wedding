@@ -74,3 +74,26 @@ test("decline video contains the full scene instead of the two-second excerpt", 
   const video = await readFile(new URL("../assets/nikakogo-prazdnika.mp4", import.meta.url));
   assert.ok(video.length > 1_000_000, `expected full video, received ${video.length} bytes`);
 });
+
+test("offers four isolated mobile redesigns and the untouched original", async () => {
+  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const script = await readFile(new URL("../invitation.mjs", import.meta.url), "utf8");
+  const css = await readFile(new URL("../design-variants.css", import.meta.url), "utf8");
+  assert.match(html, /design-variants\.css/);
+  assert.match(script, /URLSearchParams/);
+  assert.match(script, /design-(?:a|b|c|d)/);
+  for (const theme of ["a", "b", "c", "d"]) {
+    assert.match(css, new RegExp(`body\\.design-${theme}`));
+  }
+  assert.match(css, /prefers-reduced-motion/);
+  assert.match(css, /max-width:\s*430px/);
+});
+
+test("local preview links to original and all four redesigns", async () => {
+  const html = await readFile(new URL("../preview.html", import.meta.url), "utf8");
+  assert.match(html, /design=original/);
+  for (const theme of ["a", "b", "c", "d"]) {
+    assert.match(html, new RegExp(`design=${theme}`));
+  }
+  assert.equal((html.match(/class="phone"/g) ?? []).length, 4);
+});

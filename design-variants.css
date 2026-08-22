@@ -1,0 +1,177 @@
+/* Four isolated mobile-first directions. The original has no design-* class. */
+body:is(.design-a,.design-b,.design-c,.design-d){--pad:clamp(22px,7vw,34px);background:#cbc3b7;color:#211b18}
+body:is(.design-a,.design-b,.design-c,.design-d) main{width:min(100%,680px);overflow:hidden}
+body:is(.design-a,.design-b,.design-c,.design-d) .paper,
+body:is(.design-a,.design-b,.design-c,.design-d) .ink{padding:76px var(--pad)}
+body:is(.design-a,.design-b,.design-c,.design-d) .lead,
+body:is(.design-a,.design-b,.design-c,.design-d) .details p,
+body:is(.design-a,.design-b,.design-c,.design-d) .places p,
+body:is(.design-a,.design-b,.design-c,.design-d) #rsvp>p{font-size:15px;line-height:1.72;color:inherit;opacity:.84}
+body:is(.design-a,.design-b,.design-c,.design-d) .music-toggle{top:14px;right:14px;min-width:0;width:46px;height:46px;padding:0;border-radius:50%!important;font-size:0!important;box-shadow:0 5px 18px #0003!important}
+body:is(.design-a,.design-b,.design-c,.design-d) .music-toggle:after{content:"♪";font:600 20px/1 Georgia,serif}
+body:is(.design-a,.design-b,.design-c,.design-d) .quote{white-space:normal!important;margin:32px auto 0;max-width:360px}
+body:is(.design-a,.design-b,.design-c,.design-d) .countdown-section{padding-top:72px;padding-bottom:76px}
+body:is(.design-a,.design-b,.design-c,.design-d) #schedule{padding-bottom:52px}
+body:is(.design-a,.design-b,.design-c,.design-d) .timeline article{min-height:0;padding-bottom:34px}
+body:is(.design-a,.design-b,.design-c,.design-d) .timeline article:last-child{padding-bottom:0}
+body:is(.design-a,.design-b,.design-c,.design-d) .timeline [data-timeline-item]{opacity:1;transform:none}
+body:is(.design-a,.design-b,.design-c,.design-d) .timeline [data-timeline-item] div:before{transform:scale(1)}
+body:is(.design-a,.design-b,.design-c,.design-d) .details{padding-top:54px;padding-bottom:54px}
+body:is(.design-a,.design-b,.design-c,.design-d) .details article{padding:38px 0}
+body:is(.design-a,.design-b,.design-c,.design-d) .details h2{line-height:1.08}
+body:is(.design-a,.design-b,.design-c,.design-d) .places article{padding:28px 24px}
+body:is(.design-a,.design-b,.design-c,.design-d) .calendar-button,
+body:is(.design-a,.design-b,.design-c,.design-d) .map-button,
+body:is(.design-a,.design-b,.design-c,.design-d) .button{min-height:54px;font-size:10px!important;box-shadow:0 5px 14px #0002!important}
+body:is(.design-a,.design-b,.design-c,.design-d) .paper-cut{margin-bottom:0;box-shadow:none}
+body:is(.design-a,.design-b,.design-c,.design-d) .paper-cut:after{display:none}
+body:is(.design-a,.design-b,.design-c,.design-d) .closing{min-height:76svh}
+body:is(.design-a,.design-b,.design-c,.design-d).is-preview .music-toggle{display:none}
+
+/* A — Editorial Ivory */
+body.design-a{--cream:#f6f0e6;--espresso:#33251f;background:#cfc6b8}
+body.design-a main,body.design-a .paper,body.design-a .ink,body.design-a .calendar-section{background:var(--cream);color:var(--espresso)}
+body.design-a .hero{background:var(--cream);min-height:100svh}
+body.design-a .hero-top{padding:40px 24px 20px}
+body.design-a .hero .monogram{font-size:66px}
+body.design-a .hero-photo{margin:0 20px;min-height:62svh;border:8px solid #fff;box-shadow:0 18px 42px #49382b2c}
+body.design-a .hero-date{padding:26px 26px 34px}
+body.design-a #invitation{padding-top:88px;padding-bottom:70px}
+body.design-a #invitation h1{font-size:clamp(48px,15vw,76px)}
+body.design-a .section-head h2{font-size:58px}
+body.design-a .timeline:before{background:#9e8e81}
+body.design-a .timeline h3{font-size:28px}
+body.design-a .photo-break{padding:24px 24px 60px;background:var(--cream)}
+body.design-a .photo-break img{height:68svh}
+body.design-a .photo-stack-section,body.design-a .triple-stack-section,body.design-a .memory-gallery{background:#e9dfd0}
+body.design-a .details article>span{color:#8a6f5f}
+body.design-a .places article{background:#fbf7f0;border:1px solid #b7a99c}
+body.design-a #dress-code{background:var(--espresso);color:var(--cream);border:0}
+body.design-a .calendar{border-color:#8e796d}
+body.design-a .closing{background:#4b3028!important}
+
+/* B — Cinematic */
+body.design-b{--black:#11100f;--cocoa:#2c1b17;--bone:#f1eadf;background:#070707;color:var(--bone)}
+body.design-b main,body.design-b .paper,body.design-b .ink,body.design-b .calendar-section{background:var(--black);color:var(--bone)}
+body.design-b .welcome{background:#090909;color:var(--bone)}
+body.design-b .welcome-card{border-color:#9f8d7b;box-shadow:none}
+body.design-b .hero{background:#090909;color:var(--bone);min-height:100svh;display:flex;flex-direction:column}
+body.design-b .hero-top{position:absolute;z-index:2;width:100%;padding:34px 24px;background:linear-gradient(#000c,transparent)}
+body.design-b .hero .monogram{font-size:60px;color:#fff}
+body.design-b .hero .script-names{font-size:29px!important;color:#fff}
+body.design-b .hero-photo{margin:0;min-height:100svh;border:0;box-shadow:none;background-position:52% 67%;filter:grayscale(1) contrast(1.15)}
+body.design-b .hero-date{position:absolute;z-index:2;bottom:0;width:100%;padding:80px 25px 32px;color:#fff;background:linear-gradient(transparent,#000d)}
+body.design-b .scroll{bottom:95px}
+body.design-b #invitation{text-align:left;padding-top:92px}
+body.design-b #invitation .eyebrow{color:#bcae9f}
+body.design-b #invitation h1{font-size:58px;text-transform:uppercase;letter-spacing:-.04em}
+body.design-b .ornament{color:#ae806d}
+body.design-b .quote{text-align:left;margin-left:0;font-size:31px}
+body.design-b .quote:before,body.design-b .quote:after{left:0;transform:none;background:#77665d}
+body.design-b .countdown{border-top:1px solid #66544b;border-bottom:1px solid #66544b;padding:28px 0}
+body.design-b .countdown div{border:0}
+body.design-b .timer-detail{border-color:#302923}
+body.design-b .calendar-button,body.design-b .map-button,body.design-b .button{background:var(--bone)!important;color:#111!important;border-color:var(--bone)!important;border-radius:0!important}
+body.design-b .section-head h2{font:400 46px/1.05 Prata,serif;text-transform:uppercase}
+body.design-b .timeline:before{background:#69574d}
+body.design-b .timeline h3{color:#fff}
+body.design-b .photo-break{padding:0;background:#000}
+body.design-b .photo-break img{height:100svh;border:0;box-shadow:none;filter:grayscale(1) contrast(1.18)}
+body.design-b .photo-stack-section,body.design-b .triple-stack-section{background:var(--cocoa)}
+body.design-b .photo-stack-card,body.design-b .triple-stack-card,body.design-b .memory-gallery img{border-color:#171412;box-shadow:0 24px 45px #0009}
+body.design-b .details article{border-color:#51433c}
+body.design-b .details article>span{color:#b48672}
+body.design-b .places article{background:#1b1816;border:1px solid #51443d;color:var(--bone)}
+body.design-b .memory-gallery{background:#080808}
+body.design-b #dress-code{background:var(--cocoa)}
+body.design-b .calendar{border-color:#766057}
+body.design-b .closing{background:#090909!important}
+
+/* C — Romantic Album */
+body.design-c{--paper:#f5ead7;--ink:#442d29;--rose:#9c5d58;background:#c9b69d;color:var(--ink)}
+body.design-c main,body.design-c .paper,body.design-c .ink,body.design-c .calendar-section{background:var(--paper);color:var(--ink)}
+body.design-c .welcome{background:#ead9c0;color:var(--ink)}
+body.design-c .welcome-card{border:0;background:#f9f0e1;transform:rotate(-1deg);box-shadow:0 22px 50px #42291f30}
+body.design-c .hero{background:var(--paper);padding-top:22px}
+body.design-c .hero-top{padding:34px 22px 20px;transform:rotate(-1deg)}
+body.design-c .hero .monogram{font-size:62px}
+body.design-c .hero .script-names{color:#70453f!important}
+body.design-c .hero-photo{min-height:60svh;margin:0 26px;border:12px solid #fff;border-bottom-width:42px;transform:rotate(1.5deg)!important;box-shadow:0 17px 33px #42291f35}
+body.design-c .hero-date{transform:rotate(-1deg);padding:24px 28px 38px}
+body.design-c #invitation:before,body.design-c .countdown-section:before,body.design-c #schedule:before{content:"";display:block;width:42px;height:10px;margin:0 auto 42px;background:#caaea0;opacity:.65;transform:rotate(-3deg)}
+body.design-c #invitation h1{font-family:'Great Vibes',cursive;font-size:66px}
+body.design-c .quote{font-size:33px;color:#744742}
+body.design-c .timer-details{transform:rotate(-2deg)}
+body.design-c .calendar-button,body.design-c .map-button,body.design-c .button{background:#fff9ee!important;color:var(--ink)!important;border-color:var(--ink)!important;border-radius:3px!important}
+body.design-c .section-head h2{font-size:61px;color:#744742}
+body.design-c .timeline:before{background:#b28e82}
+body.design-c .timeline article:nth-child(even){transform:rotate(.5deg)}
+body.design-c .photo-break{background:var(--paper);padding:26px 26px 64px}
+body.design-c .photo-break img{height:66svh;border:12px solid #fff;border-bottom-width:35px;transform:rotate(-2deg)}
+body.design-c .photo-stack-section,body.design-c .triple-stack-section,body.design-c .memory-gallery{background:#ead6bc}
+body.design-c .story-script{color:#744742}
+body.design-c .details article{border:0;background:#fff8ea;margin:18px -4px;padding:34px 24px;box-shadow:0 12px 30px #533b2c18;transform:rotate(-.35deg)}
+body.design-c .details article:nth-child(2){transform:rotate(.55deg)}
+body.design-c .details article>span{color:var(--rose)}
+body.design-c .places article{background:#fff7e8;border:0;box-shadow:0 12px 28px #533b2c1c}
+body.design-c #dress-code{background:#7b4c46;color:#fff4e6;border:0}
+body.design-c .closing{background:#5b3631!important}
+
+/* D — Modern Minimal */
+body.design-d{--white:#f7f7f4;--black:#151515;--accent:#b8342b;background:#d8d8d2;color:var(--black);font-family:Montserrat,Arial,sans-serif}
+body.design-d main,body.design-d .paper,body.design-d .ink,body.design-d .calendar-section{background:var(--white);color:var(--black)}
+body.design-d .welcome{background:var(--white);color:var(--black);padding:20px}
+body.design-d .welcome-card{border:2px solid var(--black);box-shadow:10px 10px 0 var(--black)}
+body.design-d .welcome-mark{font-family:Prata,serif}
+body.design-d .hero{background:var(--white);min-height:100svh;padding:0}
+body.design-d .hero-top{padding:28px 20px 16px;display:grid;grid-template-columns:auto 1fr;align-items:end;text-align:left}
+body.design-d .hero .monogram{font:400 47px/1 Prata,serif}
+body.design-d .hero .script-names{font:600 13px/1.2 Montserrat,sans-serif!important;text-transform:uppercase!important;text-align:right;letter-spacing:.08em!important}
+body.design-d .hero-photo{margin:0;min-height:69svh;border:0;box-shadow:none;filter:grayscale(1) contrast(1.12)}
+body.design-d .hero-date{padding:20px;display:grid;grid-template-columns:1fr auto 1fr;border-top:2px solid #111;border-bottom:2px solid #111}
+body.design-d .hero-date strong{font:700 15px/1 Montserrat,sans-serif}
+body.design-d #invitation{text-align:left;padding-top:72px}
+body.design-d .eyebrow{font:700 10px/1.3 Montserrat,sans-serif;letter-spacing:.18em}
+body.design-d #invitation h1,body.design-d h2,body.design-d .section-head h2{font-family:Prata,serif;text-transform:uppercase;letter-spacing:-.035em}
+body.design-d #invitation h1{font-size:55px;line-height:.95}
+body.design-d .ornament{display:none}
+body.design-d .quote{font:500 22px/1.45 Prata,serif;text-align:left}
+body.design-d .quote:before,body.design-d .quote:after{left:0;transform:none;width:100%;background:#111}
+body.design-d .countdown{gap:0;border:2px solid #111}
+body.design-d .countdown div{border:0;border-right:1px solid #111;padding:20px 2px}
+body.design-d .countdown div:last-child{border:0}
+body.design-d .countdown strong{font:600 30px/1 Montserrat,sans-serif}
+body.design-d .timer-detail{border:2px solid #111;box-shadow:5px 5px 0 #111}
+body.design-d .calendar-button,body.design-d .map-button,body.design-d .button{background:var(--white)!important;color:#111!important;border:2px solid #111!important;border-radius:0!important;box-shadow:5px 5px 0 #111!important;font-weight:700!important}
+body.design-d .section-head{border-bottom:2px solid #111;padding-bottom:20px;margin-bottom:36px}
+body.design-d .section-head h2{font-size:43px}
+body.design-d .timeline:before{left:72px;background:#111;width:2px}
+body.design-d .timeline article{grid-template-columns:72px 1fr}
+body.design-d .timeline time{font:700 16px/1 Montserrat,sans-serif}
+body.design-d .timeline h3{font:600 22px/1.15 Prata,serif;text-transform:uppercase}
+body.design-d .photo-break{padding:0;background:#111}
+body.design-d .photo-break img{height:78svh;border:0;box-shadow:none}
+body.design-d .photo-stack-section,body.design-d .triple-stack-section,body.design-d .memory-gallery{background:#e5e5df}
+body.design-d .photo-stack-card,body.design-d .triple-stack-card,body.design-d .memory-gallery img{border:3px solid #111;box-shadow:7px 7px 0 #111}
+body.design-d .story-script{font:500 26px/1.3 Prata,serif;text-transform:uppercase}
+body.design-d .details article{border-bottom:2px solid #111}
+body.design-d .details article>span{font:700 14px/1 Montserrat,sans-serif;color:var(--accent)}
+body.design-d .details h2{font:500 34px/1 Prata,serif;text-transform:uppercase}
+body.design-d .places{gap:14px}
+body.design-d .places article{background:#fff;border:2px solid #111;box-shadow:7px 7px 0 #111}
+body.design-d #dress-code{background:#111;color:#fff;border:0}
+body.design-d .calendar{border:2px solid #111;border-radius:0}
+body.design-d .closing{background:#111!important}
+
+@media(max-width:430px){
+  body:is(.design-a,.design-b,.design-c,.design-d) .paper,
+  body:is(.design-a,.design-b,.design-c,.design-d) .ink{padding-left:var(--pad);padding-right:var(--pad)}
+  body:is(.design-a,.design-b,.design-c,.design-d) .timeline p{font-size:13px;line-height:1.55}
+  body:is(.design-a,.design-b,.design-c,.design-d) .memory-gallery{height:720px}
+  body:is(.design-a,.design-b,.design-c,.design-d) .memory-gallery .memory-main{height:390px}
+}
+@media(prefers-reduced-motion:reduce){
+  body:is(.design-a,.design-b,.design-c,.design-d) *,
+  body:is(.design-a,.design-b,.design-c,.design-d) *:before,
+  body:is(.design-a,.design-b,.design-c,.design-d) *:after{animation:none!important;transition:none!important}
+}
