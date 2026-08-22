@@ -62,3 +62,10 @@ test("uses irregular torn-paper section transitions and a brownie closing", asyn
   assert.match(css, /\.quote\{[^}]*Great Vibes/);
   assert.match(css, /\.quote\{[^}]*white-space:nowrap/);
 });
+
+test("decline video uses phone-compatible H.264 video and AAC audio", async () => {
+  const video = await readFile(new URL("../assets/nikakogo-prazdnika.mp4", import.meta.url));
+  assert.notEqual(video.indexOf(Buffer.from("avc1")), -1);
+  assert.notEqual(video.indexOf(Buffer.from("mp4a")), -1);
+  assert.equal(video.indexOf(Buffer.from("hev1")), -1);
+});
