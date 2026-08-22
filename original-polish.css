@@ -1,0 +1,108 @@
+/* Final mobile polish for the selected original direction. */
+body.design-original{--polish-paper:#f6f2e9;--polish-ink:#211d19;--polish-muted:#675f57;background:#d8d1c5;color:var(--polish-ink)}
+body.design-original main{overflow:hidden}
+body.design-original main h1,
+body.design-original main h2{font-family:'Great Vibes','Segoe Script',cursive!important;font-size:clamp(50px,14vw,66px)!important;font-weight:400!important;line-height:1.05!important;letter-spacing:0!important;text-transform:none!important}
+body.design-original .details-heading>.eyebrow,
+body.design-original #rsvp>.eyebrow,
+body.design-original .calendar-section>.eyebrow,
+body.design-original #dress-code>.eyebrow{font:500 9px/1.4 Montserrat,Arial,sans-serif!important;letter-spacing:.3em!important;text-transform:uppercase!important;margin-bottom:28px;color:inherit}
+body.design-original .welcome-card{min-height:min(78svh,720px);padding:44px 22px}
+body.design-original .welcome-mark{font-size:68px}
+body.design-original .welcome-names{margin:26px 0 20px}
+body.design-original .welcome-line{margin:26px 0 20px}
+body.design-original .welcome button{min-height:56px}
+
+body.design-original .music-toggle{top:16px;right:16px;width:auto;min-width:76px;height:44px;padding:0 13px;border-radius:8px!important;font:600 9px Montserrat,Arial,sans-serif!important;letter-spacing:.08em;text-transform:uppercase;box-shadow:0 5px 0 #111,0 8px 16px #0004!important;background:#fff!important;color:#111!important;backdrop-filter:none}
+body.design-original .music-toggle:after{content:none}
+
+body.design-original .hero{height:100svh;min-height:680px;position:relative;padding:0;overflow:hidden;background:#111}
+body.design-original .hero-top{position:absolute;z-index:4;top:45px;left:30px;right:30px;padding:0;display:flex;justify-content:center;pointer-events:none}
+body.design-original .hero-top .monogram{display:none}
+body.design-original .hero .script-names{display:block;margin:0!important;color:#fff!important;font-size:clamp(46px,14vw,66px)!important;line-height:1!important;text-align:center;text-shadow:0 2px 16px #000,0 1px 3px #000}
+body.design-original .hero .script-names b{font-size:.42em}
+body.design-original .hero-photo{position:absolute;inset:0;min-height:0;width:100%;height:100%;margin:0;border:0;box-shadow:none;background-position:52% 67%;filter:grayscale(1) contrast(1.07)}
+body.design-original .hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0008 0%,transparent 30%,transparent 62%,#000b 100%)}
+body.design-original .hero-date{position:absolute;z-index:4;left:0;right:0;bottom:28px;padding:20px 24px;color:#fff;text-shadow:0 2px 8px #000;pointer-events:none}
+body.design-original .hero-date span,body.design-original .hero-date strong{color:#fff}
+body.design-original .scroll.scroll-diamonds{z-index:5;bottom:82px;filter:drop-shadow(0 2px 5px #000)}
+
+body.design-original .paper,body.design-original .ink{padding-top:76px;padding-bottom:76px}
+body.design-original #invitation{padding-top:82px;padding-bottom:62px}
+body.design-original #invitation h1{line-height:1.03}
+body.design-original .lead{font-size:18px;line-height:1.62;color:#463f38}
+body.design-original .ornament{margin-top:36px}
+body.design-original .quote{white-space:normal!important;max-width:350px;margin:34px auto 0;padding:24px 0;font-size:clamp(27px,8vw,36px)}
+
+body.design-original .countdown-section{padding-top:64px;padding-bottom:72px;background:#4b3028;color:#f6f2e9;border-color:#6b4a40}
+body.design-original .countdown-section .eyebrow{color:#f6f2e9}
+body.design-original .countdown-section .countdown div{border-color:#f6f2e966}
+body.design-original .countdown-section .countdown span{color:#f6f2e9;opacity:.78}
+body.design-original .countdown{margin-top:25px}
+body.design-original .countdown span{color:#675f57;opacity:1}
+body.design-original .timer-details{margin-top:26px}
+body.design-original .calendar-actions{margin-top:24px}
+
+body.design-original #schedule{padding-top:70px;padding-bottom:54px}
+body.design-original .section-head{margin-bottom:34px}
+body.design-original .section-head h2{line-height:1.05}
+body.design-original .timeline:before{bottom:24px}
+body.design-original .timeline article{min-height:0;padding-bottom:34px}
+body.design-original .timeline article:last-child{padding-bottom:0}
+body.design-original .timeline [data-timeline-item]{opacity:1;transform:none}
+body.design-original .timeline [data-timeline-item] div:before{transform:scale(1)}
+body.design-original .timeline h3{font-size:27px;line-height:1.16;color:#28231f}
+body.design-original .timeline p{font-size:13px;line-height:1.55;color:#675f57;opacity:1}
+
+body.design-original .photo-break{padding:22px 25px 54px}
+body.design-original .photo-break img{height:68svh}
+body.design-original .photo-stack-section{padding-top:30px;padding-bottom:70px}
+body.design-original .story-script{margin-top:25px}
+body.design-original .story-script{position:relative;padding:25px 0;margin-left:auto;margin-right:auto}
+body.design-original .story-script:before,
+body.design-original .story-script:after{content:"";position:absolute;left:50%;width:72px;height:1px;background:#222;transform:translateX(-50%)}
+body.design-original .story-script:before{top:0}
+body.design-original .story-script:after{bottom:0}
+body.design-original .triple-stack-section{padding-top:24px;padding-bottom:70px}
+
+body.design-original .details{padding-top:46px;padding-bottom:46px}
+body.design-original .details-heading{text-align:center;margin-bottom:28px}
+body.design-original .details-heading .eyebrow{margin-bottom:18px}
+body.design-original .details-heading h2{margin:0}
+body.design-original .details article{padding:36px 0}
+body.design-original .details article h2{margin:10px 0 20px;font-family:Prata,'Cormorant Garamond',serif!important;font-size:clamp(27px,8vw,38px)!important;font-weight:400!important;line-height:1.15!important;letter-spacing:0!important;text-transform:none!important}
+body.design-original .details article .gifts-title{white-space:nowrap;font-size:clamp(25px,7.4vw,35px)!important}
+body.design-original .details p{font-size:14px;line-height:1.75;color:#4f4841;opacity:1}
+body.design-original .memory-gallery{height:790px;padding-top:55px;padding-bottom:80px}
+
+body.design-original #locations{padding-top:68px;padding-bottom:70px}
+body.design-original .places{gap:16px}
+body.design-original .places article{padding:26px 22px}
+body.design-original .places p{font-size:14px;line-height:1.65;color:#554d46}
+body.design-original .map-button,body.design-original .calendar-button,body.design-original .button{min-height:54px;font-size:10px!important;box-shadow:0 5px 14px #30281e26!important}
+
+body.design-original #dress-code{padding-top:72px;padding-bottom:72px}
+body.design-original #dress-code .lead{font-size:18px;line-height:1.62}
+body.design-original .forbidden-colors{margin-top:28px}
+body.design-original .calendar-section{padding-top:74px;padding-bottom:78px}
+body.design-original .calendar-section h2{font-size:clamp(50px,14vw,66px)!important}
+body.design-original .calendar-section .calendar-actions{margin-top:28px}
+body.design-original #rsvp{padding-top:72px;padding-bottom:76px}
+body.design-original #rsvp>p{font-size:15px;color:#554d46}
+body.design-original .closing{min-height:58svh;padding-top:52px;padding-bottom:52px}
+
+body.design-original .paper-cut{margin-bottom:12px}
+body.design-original .paper-cut:after{bottom:-12px;height:14px;clip-path:polygon(0 0,100% 0,100% 42%,95% 72%,90% 50%,84% 78%,78% 48%,72% 74%,65% 50%,58% 80%,51% 46%,44% 76%,37% 49%,30% 73%,23% 47%,16% 79%,9% 48%,0 72%);filter:drop-shadow(0 4px 3px #30281e20)}
+
+@media(max-width:430px){
+  body.design-original .paper,body.design-original .ink{padding-left:24px;padding-right:24px}
+  body.design-original .countdown{gap:2px}
+  body.design-original .countdown strong{font-size:32px}
+  body.design-original .timeline{margin-left:-3px}
+  body.design-original .memory-gallery{height:710px}
+  body.design-original .memory-gallery .memory-card{height:230px}
+  body.design-original .memory-gallery .memory-main{top:165px;height:390px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.design-original *,body.design-original *:before,body.design-original *:after{animation:none!important;transition:none!important}
+}

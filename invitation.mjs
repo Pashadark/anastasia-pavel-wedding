@@ -4,6 +4,16 @@ export function getCountdownParts(targetMs, nowMs) {
 }
 
 function boot() {
+  const params = new URLSearchParams(window.location.search);
+  const designClasses = { a: "design-a", b: "design-b", c: "design-c", d: "design-d" };
+  const design = params.get("design");
+  if (!design || design === "original") document.body.classList.add("design-original");
+  if (designClasses[design]) document.body.classList.add(designClasses[design]);
+  if (params.get("preview") === "1") {
+    document.querySelector("[data-welcome]")?.classList.add("hidden");
+    document.body.classList.remove("locked");
+    document.body.classList.add("is-preview");
+  }
   const music = document.querySelector("[data-music]");
   const musicToggle = document.querySelector("[data-music-toggle]");
   document.querySelector("[data-open-invitation]")?.addEventListener("click", async () => {

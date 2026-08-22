@@ -22,7 +22,7 @@ test("contains the complete wedding invitation", async () => {
   assert.doesNotMatch(html, /морепродукт/);
   assert.match(html, /yandex\.ru\/maps\/org\/dnevnik\/169389306628/);
   assert.match(html, /data-add-calendar/);
-  assert.match(html, /timer-detail/);
+  assert.doesNotMatch(html, /timer-detail/);
   assert.match(html, /она бесценна/);
   assert.match(html, /Карандаш/);
   assert.match(html, /мальчика или девочку/);
@@ -34,7 +34,7 @@ test("contains the complete wedding invitation", async () => {
   assert.match(html, /class="photo-stack-card photo-stack-small"/);
   for (let photo = 1; photo <= 10; photo += 1) {
     const matches = html.match(new RegExp(`new-photo-${String(photo).padStart(2, "0")}\\.jpg`, "g")) ?? [];
-    assert.equal(matches.length, 1, `new photo ${photo} must appear exactly once`);
+    assert.equal(matches.length, photo === 7 ? 0 : 1, `new photo ${photo} has the expected placement`);
   }
   assert.match(html, /assets\/nikakogo-prazdnika\.mp4/);
   assert.doesNotMatch(html, /data-decline-audio/);
@@ -46,7 +46,7 @@ test("contains the complete wedding invitation", async () => {
   assert.doesNotMatch(script, /declineAudio/);
   assert.match(html, /class="triple-stack"/);
   assert.equal((html.match(/triple-stack-card/g) ?? []).length, 3);
-  assert.match(html, /class="memory-main" src="\.\/assets\/new-photo-01\.jpg"/);
+  assert.match(html, /class="memory-main" src="\.\/assets\/new-photo-10\.jpg"/);
   assert.match(html, /scroll-diamonds/);
   assert.doesNotMatch(html, /Открыть карту ↗/);
   assert.doesNotMatch(html, /Открыть видео отдельно ↗/);
@@ -73,4 +73,39 @@ test("decline video uses phone-compatible H.264 video and AAC audio", async () =
 test("decline video contains the full scene instead of the two-second excerpt", async () => {
   const video = await readFile(new URL("../assets/nikakogo-prazdnika.mp4", import.meta.url));
   assert.ok(video.length > 1_000_000, `expected full video, received ${video.length} bytes`);
+});
+
+test("offers four isolated mobile redesigns and the untouched original", async () => {
+  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const script = await readFile(new URL("../invitation.mjs", import.meta.url), "utf8");
+  const css = await readFile(new URL("../design-variants.css", import.meta.url), "utf8");
+  assert.match(html, /design-variants\.css/);
+  assert.match(script, /URLSearchParams/);
+  assert.match(script, /design-(?:a|b|c|d)/);
+  for (const theme of ["a", "b", "c", "d"]) {
+    assert.match(css, new RegExp(`body\\.design-${theme}`));
+  }
+  assert.match(css, /prefers-reduced-motion/);
+  assert.match(css, /max-width:\s*430px/);
+});
+
+test("local preview links to original and all four redesigns", async () => {
+  const html = await readFile(new URL("../preview.html", import.meta.url), "utf8");
+  assert.match(html, /design=original/);
+  for (const theme of ["a", "b", "c", "d"]) {
+    assert.match(html, new RegExp(`design=${theme}`));
+  }
+  assert.equal((html.match(/class="phone"/g) ?? []).length, 4);
+});
+
+test("the chosen original direction has a dedicated mobile polish layer", async () => {
+  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const script = await readFile(new URL("../invitation.mjs", import.meta.url), "utf8");
+  const css = await readFile(new URL("../original-polish.css", import.meta.url), "utf8");
+  assert.match(html, /original-polish\.css/);
+  assert.match(script, /design-original/);
+  assert.match(css, /body\.design-original/);
+  assert.match(css, /max-width:\s*430px/);
+  assert.match(css, /prefers-reduced-motion/);
+  assert.match(css, /timeline \[data-timeline-item\][^{]*\{[^}]*opacity:\s*1/);
 });
