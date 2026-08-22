@@ -69,3 +69,8 @@ test("decline video uses phone-compatible H.264 video and AAC audio", async () =
   assert.notEqual(video.indexOf(Buffer.from("mp4a")), -1);
   assert.equal(video.indexOf(Buffer.from("hev1")), -1);
 });
+
+test("decline video contains the full scene instead of the two-second excerpt", async () => {
+  const video = await readFile(new URL("../assets/nikakogo-prazdnika.mp4", import.meta.url));
+  assert.ok(video.length > 1_000_000, `expected full video, received ${video.length} bytes`);
+});
