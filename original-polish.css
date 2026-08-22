@@ -1,0 +1,84 @@
+/* Final mobile polish for the selected original direction. */
+body.design-original{--polish-paper:#f6f2e9;--polish-ink:#211d19;--polish-muted:#675f57;background:#d8d1c5;color:var(--polish-ink)}
+body.design-original main{overflow:hidden}
+body.design-original .welcome-card{min-height:min(78svh,720px);padding:44px 22px}
+body.design-original .welcome-mark{font-size:68px}
+body.design-original .welcome-names{margin:26px 0 20px}
+body.design-original .welcome-line{margin:26px 0 20px}
+body.design-original .welcome button{min-height:56px}
+
+body.design-original .music-toggle{top:14px;right:14px;width:46px;min-width:46px;height:46px;padding:0;border-radius:50%!important;font-size:0!important;box-shadow:0 5px 16px #0003!important;background:#fbf8f1e8!important;backdrop-filter:blur(8px)}
+body.design-original .music-toggle:after{content:"♪";font:600 20px/1 Georgia,serif;color:#211d19}
+
+body.design-original .hero{min-height:100svh}
+body.design-original .hero-top{padding-top:28px;padding-bottom:18px}
+body.design-original .hero .monogram{font-size:64px}
+body.design-original .hero .script-names{font-size:31px!important;margin-top:18px}
+body.design-original .hero-photo{min-height:61svh;margin:0 20px;border-width:8px;box-shadow:0 16px 38px #30281e2b}
+body.design-original .hero-date{padding:24px 24px 34px}
+
+body.design-original .paper,body.design-original .ink{padding-top:76px;padding-bottom:76px}
+body.design-original #invitation{padding-top:82px;padding-bottom:62px}
+body.design-original #invitation h1{font-size:clamp(48px,14vw,70px);line-height:1.03}
+body.design-original .lead{font-size:18px;line-height:1.62;color:#463f38}
+body.design-original .ornament{margin-top:36px}
+body.design-original .quote{white-space:normal!important;max-width:350px;margin:34px auto 0;padding:24px 0;font-size:clamp(27px,8vw,36px)}
+
+body.design-original .countdown-section{padding-top:64px;padding-bottom:72px}
+body.design-original .countdown{margin-top:25px}
+body.design-original .countdown span{color:#675f57;opacity:1}
+body.design-original .timer-details{margin-top:26px}
+body.design-original .calendar-actions{margin-top:24px}
+
+body.design-original #schedule{padding-top:70px;padding-bottom:54px}
+body.design-original .section-head{margin-bottom:34px}
+body.design-original .section-head h2{font-size:56px;line-height:1.05}
+body.design-original .timeline:before{bottom:24px}
+body.design-original .timeline article{min-height:0;padding-bottom:34px}
+body.design-original .timeline article:last-child{padding-bottom:0}
+body.design-original .timeline [data-timeline-item]{opacity:1;transform:none}
+body.design-original .timeline [data-timeline-item] div:before{transform:scale(1)}
+body.design-original .timeline h3{font-size:27px;line-height:1.16;color:#28231f}
+body.design-original .timeline p{font-size:13px;line-height:1.55;color:#675f57;opacity:1}
+
+body.design-original .photo-break{padding:22px 25px 54px}
+body.design-original .photo-break img{height:68svh}
+body.design-original .photo-stack-section{padding-top:30px;padding-bottom:70px}
+body.design-original .story-script{margin-top:25px}
+body.design-original .triple-stack-section{padding-top:24px;padding-bottom:70px}
+
+body.design-original .details{padding-top:46px;padding-bottom:46px}
+body.design-original .details article{padding:36px 0}
+body.design-original .details h2{font-size:37px;margin-bottom:20px}
+body.design-original .details p{font-size:14px;line-height:1.75;color:#4f4841;opacity:1}
+body.design-original .memory-gallery{height:790px;padding-top:55px;padding-bottom:80px}
+
+body.design-original #locations{padding-top:68px;padding-bottom:70px}
+body.design-original .places{gap:16px}
+body.design-original .places article{padding:26px 22px}
+body.design-original .places p{font-size:14px;line-height:1.65;color:#554d46}
+body.design-original .map-button,body.design-original .calendar-button,body.design-original .button{min-height:54px;font-size:10px!important;box-shadow:0 5px 14px #30281e26!important}
+
+body.design-original #dress-code{padding-top:72px;padding-bottom:72px}
+body.design-original #dress-code .lead{font-size:18px;line-height:1.62}
+body.design-original .forbidden-colors{margin-top:28px}
+body.design-original .calendar-section{padding-top:74px;padding-bottom:78px}
+body.design-original #rsvp{padding-top:72px;padding-bottom:76px}
+body.design-original #rsvp>p{font-size:15px;color:#554d46}
+body.design-original .closing{min-height:76svh}
+
+body.design-original .paper-cut{margin-bottom:12px}
+body.design-original .paper-cut:after{bottom:-12px;height:14px;clip-path:polygon(0 0,100% 0,100% 42%,95% 72%,90% 50%,84% 78%,78% 48%,72% 74%,65% 50%,58% 80%,51% 46%,44% 76%,37% 49%,30% 73%,23% 47%,16% 79%,9% 48%,0 72%);filter:drop-shadow(0 4px 3px #30281e20)}
+
+@media(max-width:430px){
+  body.design-original .paper,body.design-original .ink{padding-left:24px;padding-right:24px}
+  body.design-original .countdown{gap:2px}
+  body.design-original .countdown strong{font-size:32px}
+  body.design-original .timeline{margin-left:-3px}
+  body.design-original .memory-gallery{height:710px}
+  body.design-original .memory-gallery .memory-card{height:230px}
+  body.design-original .memory-gallery .memory-main{top:165px;height:390px}
+}
+@media(prefers-reduced-motion:reduce){
+  body.design-original *,body.design-original *:before,body.design-original *:after{animation:none!important;transition:none!important}
+}

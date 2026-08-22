@@ -97,3 +97,15 @@ test("local preview links to original and all four redesigns", async () => {
   }
   assert.equal((html.match(/class="phone"/g) ?? []).length, 4);
 });
+
+test("the chosen original direction has a dedicated mobile polish layer", async () => {
+  const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
+  const script = await readFile(new URL("../invitation.mjs", import.meta.url), "utf8");
+  const css = await readFile(new URL("../original-polish.css", import.meta.url), "utf8");
+  assert.match(html, /original-polish\.css/);
+  assert.match(script, /design-original/);
+  assert.match(css, /body\.design-original/);
+  assert.match(css, /max-width:\s*430px/);
+  assert.match(css, /prefers-reduced-motion/);
+  assert.match(css, /timeline \[data-timeline-item\][^{]*\{[^}]*opacity:\s*1/);
+});
