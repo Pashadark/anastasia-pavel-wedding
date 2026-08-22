@@ -48,6 +48,8 @@ test("contains the complete wedding invitation", async () => {
   assert.equal((html.match(/triple-stack-card/g) ?? []).length, 3);
   assert.match(html, /class="memory-main" src="\.\/assets\/new-photo-10\.jpg"/);
   assert.match(html, /scroll-diamonds/);
+  assert.match(html, /Один день · одна история/);
+  assert.match(html, /class="hero-kicker"/);
   assert.doesNotMatch(html, /Открыть карту ↗/);
   assert.doesNotMatch(html, /Открыть видео отдельно ↗/);
 });
