@@ -22,7 +22,7 @@ test("contains the complete wedding invitation", async () => {
   assert.doesNotMatch(html, /морепродукт/);
   assert.match(html, /yandex\.ru\/maps\/org\/dnevnik\/169389306628/);
   assert.match(html, /data-add-calendar/);
-  assert.match(html, /timer-detail/);
+  assert.doesNotMatch(html, /timer-detail/);
   assert.match(html, /она бесценна/);
   assert.match(html, /Карандаш/);
   assert.match(html, /мальчика или девочку/);
@@ -34,7 +34,7 @@ test("contains the complete wedding invitation", async () => {
   assert.match(html, /class="photo-stack-card photo-stack-small"/);
   for (let photo = 1; photo <= 10; photo += 1) {
     const matches = html.match(new RegExp(`new-photo-${String(photo).padStart(2, "0")}\\.jpg`, "g")) ?? [];
-    assert.equal(matches.length, 1, `new photo ${photo} must appear exactly once`);
+    assert.equal(matches.length, photo === 7 ? 0 : 1, `new photo ${photo} has the expected placement`);
   }
   assert.match(html, /assets\/nikakogo-prazdnika\.mp4/);
   assert.doesNotMatch(html, /data-decline-audio/);
@@ -46,7 +46,7 @@ test("contains the complete wedding invitation", async () => {
   assert.doesNotMatch(script, /declineAudio/);
   assert.match(html, /class="triple-stack"/);
   assert.equal((html.match(/triple-stack-card/g) ?? []).length, 3);
-  assert.match(html, /class="memory-main" src="\.\/assets\/new-photo-01\.jpg"/);
+  assert.match(html, /class="memory-main" src="\.\/assets\/new-photo-10\.jpg"/);
   assert.match(html, /scroll-diamonds/);
   assert.doesNotMatch(html, /Открыть карту ↗/);
   assert.doesNotMatch(html, /Открыть видео отдельно ↗/);
