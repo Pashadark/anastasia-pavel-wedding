@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="Приглашение на мальчишник Павла — 29 августа 2026">
+  <title>Мальчишник Павла</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="hero">
+    <img class="hero-photo" src="./assets/party-photo-01.jpg" alt="Павел" fetchpriority="high">
+    <div class="hero-shade"></div>
+    <p class="warning-tape">PRIVATE PARTY · PRIVATE PARTY · PRIVATE PARTY</p>
+    <div class="hero-copy">
+      <p class="stamp">18+ / ACCESS RESTRICTED</p>
+      <h1 aria-label="BOYS ONLY"><span>BOYS</span><span class="acid">ONLY</span></h1>
+      <p class="no-women">NO WOMEN. DON’T LOOK.</p>
+      <a class="scroll-cue" href="#invite">Листай вниз</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="invite reveal" id="invite">
+      <div class="issue">Выпуск № 29/08</div>
+      <p class="eyebrow">Совершенно секретно</p>
+      <h2>Мальчишник<br><span>Павла</span></h2>
+      <p class="lead">Собираемся шумно проводить последнюю свободную субботу. Без официальной части, скучных речей и раннего отбоя.</p>
+      <div class="date-card">
+        <span>Суббота</span><strong>29</strong><span>августа 2026</span><b>17:00</b>
+      </div>
+    </section>
+
+    <section class="kinetic reveal" aria-label="Фотомонтаж">
+      <div class="kinetic-copy"><span>Состав</span><strong>проверен</strong><span>временем</span></div>
+      <div class="filmstrip" data-filmstrip>
+        <figure class="frame is-active"><img src="./assets/party-photo-02.jpg" alt="Снимки друзей"><figcaption>Архив</figcaption></figure>
+        <figure class="frame"><img src="./assets/party-photo-03.jpg" alt="Походный набор"><figcaption>Топливо</figcaption></figure>
+        <figure class="frame"><img src="./assets/party-photo-04.jpg" alt="Павел у машины"><figcaption>Подготовка</figcaption></figure>
+        <figure class="frame"><img src="./assets/party-photo-05.jpg" alt="Кадр с собакой"><figcaption>Ожидание</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="manifest reveal">
+      <p class="eyebrow">Правила простые</p>
+      <ol>
+        <li><span>01</span>Не опаздывать</li>
+        <li><span>02</span>Быть готовым ко всему</li>
+        <li><span>03</span>Увиденное остаётся между нами</li>
+      </ol>
+    </section>
+
+    <section class="gallery reveal" aria-label="Наши истории">
+      <p class="side-label">Доказательства</p>
+      <figure class="tilt left"><img src="./assets/party-photo-06.jpg" alt="Павел в путешествии"><figcaption>Дорога правильная</figcaption></figure>
+      <figure class="tilt right blue"><img src="./assets/party-photo-07.jpg" alt="Весёлый видеозвонок"><figcaption>Связь стабильная</figcaption></figure>
+      <figure class="tilt left pink"><img src="./assets/party-photo-08.jpg" alt="Друзья вечером"><figcaption>Режим ночной</figcaption></figure>
+      <figure class="tilt right"><img src="./assets/party-photo-09.jpg" alt="Портрет Павла"><figcaption>Жених спокоен</figcaption></figure>
+      <figure class="tilt group"><img src="./assets/party-photo-10.jpg" alt="Компания друзей"><figcaption>Команда в сборе</figcaption></figure>
+    </section>
+
+    <section class="location reveal" id="location">
+      <p class="eyebrow">Точка сбора</p>
+      <h2>Место строго<br>засекречено</h2>
+      <div class="classified" data-location-panel hidden>
+        <span>Доступ временно закрыт</span>
+        <strong>Координаты ещё зашифрованы.</strong>
+        <p>Вернись немного позже — здесь появится точка сбора.</p>
+      </div>
+      <button type="button" data-location-trigger>Узнать место</button>
+    </section>
+
+    <section class="future-video" data-video-slot hidden aria-label="Видео"></section>
+
+    <footer class="closing reveal">
+      <p class="eyebrow">От Павла</p>
+      <blockquote>«Я всегда душой с вами. Когда появится возможность позвать меня — зовите. У меня больше нет ебнутых отношений».</blockquote>
+      <p>А вам желаю дружбы, которая переживёт любые отношения, любые города и любые безумные ночи.</p>
+      <strong>29.08 · 17:00</strong>
+      <span>Не опаздывай.</span>
+    </footer>
+  </main>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>
