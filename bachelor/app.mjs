@@ -6,10 +6,37 @@ export function revealLocation(panel, button) {
   button.disabled = true;
 }
 
+export async function playFromIntro(audio) {
+  if (!audio) return;
+  if (!audio.currentTime || audio.currentTime < 27) audio.currentTime = 27;
+  await audio.play();
+}
+
 if (typeof document !== 'undefined') {
   const panel = document.querySelector('[data-location-panel]');
   const trigger = document.querySelector('[data-location-trigger]');
   trigger?.addEventListener('click', () => revealLocation(panel, trigger));
+
+  const music = document.querySelector('[data-party-music]');
+  const musicButton = document.querySelector('[data-music-button]');
+  let musicStarted = false;
+  const updateMusicButton = () => {
+    if (!musicButton || !music) return;
+    musicButton.textContent = music.paused ? 'Музыка' : 'Пауза';
+    musicButton.setAttribute('aria-label', music.paused ? 'Включить музыку' : 'Поставить музыку на паузу');
+  };
+  const startOnFirstTouch = async () => {
+    if (musicStarted || !music) return;
+    try { await playFromIntro(music); musicStarted = true; updateMusicButton(); } catch { updateMusicButton(); }
+  };
+  document.addEventListener('pointerdown', startOnFirstTouch, { once: true });
+  musicButton?.addEventListener('click', async event => {
+    event.stopPropagation();
+    if (!music) return;
+    if (music.paused) { try { await playFromIntro(music); musicStarted = true; } catch {} }
+    else music.pause();
+    updateMusicButton();
+  });
 
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const reveals = document.querySelectorAll('.reveal');
