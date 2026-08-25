@@ -12,6 +12,12 @@ export async function playFromIntro(audio) {
   await audio.play();
 }
 
+export async function openInvitation(gate, audio, finish = () => gate?.remove()) {
+  await playFromIntro(audio);
+  gate?.classList.add('is-opening');
+  finish();
+}
+
 if (typeof document !== 'undefined') {
   const panel = document.querySelector('[data-location-panel]');
   const trigger = document.querySelector('[data-location-trigger]');
@@ -19,17 +25,24 @@ if (typeof document !== 'undefined') {
 
   const music = document.querySelector('[data-party-music]');
   const musicButton = document.querySelector('[data-music-button]');
+  const entryGate = document.querySelector('[data-entry-gate]');
+  const entryButton = document.querySelector('[data-entry-button]');
   let musicStarted = false;
   const updateMusicButton = () => {
     if (!musicButton || !music) return;
     musicButton.textContent = music.paused ? 'Музыка' : 'Пауза';
     musicButton.setAttribute('aria-label', music.paused ? 'Включить музыку' : 'Поставить музыку на паузу');
   };
-  const startOnFirstTouch = async () => {
-    if (musicStarted || !music) return;
-    try { await playFromIntro(music); musicStarted = true; updateMusicButton(); } catch { updateMusicButton(); }
-  };
-  document.addEventListener('pointerdown', startOnFirstTouch, { once: true });
+  entryButton?.addEventListener('click', async () => {
+    if (!entryGate || !music) return;
+    try {
+      await openInvitation(entryGate, music, () => setTimeout(() => entryGate.remove(), 420));
+      musicStarted = true;
+    } catch {
+      entryGate.remove();
+    }
+    updateMusicButton();
+  });
   musicButton?.addEventListener('click', async event => {
     event.stopPropagation();
     if (!music) return;
