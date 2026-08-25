@@ -6,6 +6,13 @@ export function revealLocation(panel, button) {
   button.disabled = true;
 }
 
+export async function revealLocationMedia(panel, video) {
+  if (!panel) return;
+  panel.hidden = false;
+  panel.classList.add('is-revealed');
+  try { await video?.play(); } catch {}
+}
+
 export async function playFromIntro(audio) {
   if (!audio) return;
   if (!audio.currentTime || audio.currentTime < 27) audio.currentTime = 27;
@@ -21,7 +28,12 @@ export async function openInvitation(gate, audio, finish = () => gate?.remove())
 if (typeof document !== 'undefined') {
   const panel = document.querySelector('[data-location-panel]');
   const trigger = document.querySelector('[data-location-trigger]');
-  trigger?.addEventListener('click', () => revealLocation(panel, trigger));
+  const locationVideo = document.querySelector('[data-location-video]');
+  const locationVideoPlayer = document.querySelector('[data-location-video-player]');
+  trigger?.addEventListener('click', () => {
+    revealLocation(panel, trigger);
+    revealLocationMedia(locationVideo, locationVideoPlayer);
+  });
 
   const music = document.querySelector('[data-party-music]');
   const musicButton = document.querySelector('[data-music-button]');
