@@ -91,13 +91,13 @@ if (typeof document !== 'undefined') {
   const packScreen = document.querySelector('[data-pack-screen]');
   const packCount = document.querySelector('[data-pack-count]');
   const joined = localStorage.getItem('bachelor-pack-joined') === '1';
-  if (joined && packCount) packCount.textContent = '8';
+  if (joined && packCount) packCount.textContent = '1';
   joinButton?.addEventListener('click', event => {
     event.preventDefault();
     const href = joinButton.href;
     if (!localStorage.getItem('bachelor-pack-joined')) {
       localStorage.setItem('bachelor-pack-joined', '1');
-      if (packCount) packCount.textContent = '8';
+      if (packCount) packCount.textContent = '1';
     }
     if (packScreen) {
       packScreen.hidden = false;
